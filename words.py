@@ -22,3 +22,7 @@ with urlopen(file) as story:
 print("Total number of words", count)
 print ("Total data", data)
 
+# sort by keys
+for key in sorted(data.keys()):
+    print(key, data[key])
+
