@@ -26,3 +26,22 @@ print(s4)
 # Support for backslash
 s5 = "A\\in a string"
 print(s5)
+print("this is ")
+
+# Raw Strings
+# tells python to take string as is, no escaping, or other processing
+# string must start with an r
+raw_string = r'c:\User\Documents\Books'
+print(raw_string)
+
+# String as sequence
+# index notation starts at 0, processed like in other languages
+s = "parrot"
+print("s[4]", s[4], type(s))
+
+print(s.capitalize())
+g = s
+print(g.capitalize())
+g=s.upper()
+print(g)
+print(g[0])
