@@ -33,6 +33,17 @@ def fetch_words():
     for key in sorted(data.keys()):
         print(key, data[key])
 
+
+def print_items(items):
+    """
+    Print elements of the collection
+    :param items: A collections of objects
+    :return: nothing
+    """
+    for item in items:
+        print(item)
+
+
 def main():
     """
     Test function
