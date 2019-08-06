@@ -11,22 +11,30 @@ def do_tuples():
 
     # Immutable sequence of arbitrary objects
     # Use () to define a tuple
-    t = ("Ogden", 1.99, 2)
-    print(t, type(t))
-    print("Size ", len(t))
-    print("One member: ", t[0])  # by index notaton
-    # To iterate over a tuple
-    for item in t:
-        print(item)
+    # t = ("Ogden", 1.99, 2)
+    # print(t, type(t))
+    # print("Size ", len(t))
+    # print("One member: ", t[0])  # by index notaton
+    # # To iterate over a tuple
+    # for item in t:
+    #     print(item)
+    #
+    # # Single tuples
+    # t1 = (6,)  # single tuples, must end with comma
+    # print(t1, type(t1))
+    #
+    # # another way to create tuples
+    # # parenthesis are optional
+    # t2 = 1, 2, 3, 5
+    # print(t2, type(t2))
 
-    # Single tuples
-    t1 = (6,)  # single tuples, must end with comma
-    print(t1, type(t1))
+    # Tuple constructor
+    t_from_1 = tuple([3, 77, 11])       # Tuple from list
+    print(t_from_1, type(t_from_1))
+    # test for membership
+    print(5 in (3, 6, 8, 5, 12))
+    print(5 not in (3, 6, 8, 5, 12))
 
-    # another way to create tuples
-    # parenthesis are optional
-    t2 = 1, 2, 3, 5
-    print(t2, type(t2))
 
 
 def min_max(items):
