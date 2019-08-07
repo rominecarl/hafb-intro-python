@@ -8,3 +8,12 @@ Repository for the Weber State University Continuing Education Beginning Python 
 - Basics of Iterations
 - Basics of functions (**def**)
 - The concepts of modularity
+
+## Day 2 Summary
+- Opening YouTube videos in a web browser [webbrowser() module]
+- time() module
+- Definitions:
+    - required parameters
+    - optional parameters
+- Tuples and unpacking tuples
+- More about strings
