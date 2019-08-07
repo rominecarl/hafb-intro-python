@@ -3,7 +3,6 @@ Purpose: Learn about dictionaries
 Day 3 - 10:30
 """
 
-
 def main():
     """
     Test function
@@ -64,6 +63,21 @@ def main():
     print(stocks)
     del stocks['YHOO']
     print(stocks)
+
+    # Mutability of dictionaries
+    isotopes = {
+        'H': [1, 2, 3],
+        'He': [3, 4],
+        'Li': [6, 7],
+        'Be': [7, 9, 10],
+        'B': [10, 11],
+        'C': [11, 12, 13, 14]
+    }
+    print(isotopes)
+    isotopes['H'] += [4, 5, 6, 7]
+    print(isotopes)
+    isotopes['N'] = [13, 14, 15]
+    print(isotopes)
 
 
 
