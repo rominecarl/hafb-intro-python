@@ -74,14 +74,59 @@ def main():
     print("c",c)
     print("d",d) # D has 4 elements, all pointing to the same location as c
     s = [[-1, 1] * 5]
-    print(s)    # check this, doesn't seem to be working
-    s[1].append(7)  # check this, doesn't seem to be working
-    print(s)    # check this, doesn't seem to be working
+    print(s)
+    # s[1].append(7)  # check this, doesn't seem to be working
+    # print(s)    # check this, doesn't seem to be working
 
     # index()
     w = "the quick brown fox jumped over the lazy dog".split()
+    print(w)
     i = w.index('fox')
-    print("The index of 'fox' entry is:", i)
+    print("The index of 'fox' entry is:", i, w[i])
+    # If no index is found, it will throw a Value Error
+    # i = w.index('cat')
+    # print("The index of 'cat' entry is:", i, w[i])
+
+    # Membership testing with: count()
+    print("'the' value is ", w.count("the"))
+
+    # Also test membership with: in, not in
+    print(37 in [12, 22, 37, 99])
+    print(37 not in [12, 22, 37, 99])
+
+    # removing elements from list: index and del
+    w = "the quick brown fox jumps over the lazy dog".split()
+    print(len(w), w)
+    del w[3]
+    print(len(w), w)
+
+    # remove using: remove()
+    w.remove("over")
+    print(len(w), w)
+
+    #Rearranging list of elements
+    g = [1, 11, 21, 1211, 112111]
+    print("g", g)
+    g.reverse()     # Caution: This is permanent
+    print("reverse g:", g)
+    print("g", g)
+
+    # Sort method accepts two arguments: key and reverse
+    # ascending (smaller to larger is default
+    d = [21, 33, 11, 77, 88, 33, 101, 1]
+    print("d:", d)
+    d.sort()
+    print("sort d:", d)
+    d.sort(reverse=True)
+    print("sort.reverse d:", d)
+
+    #sort by key
+    w = "the quick brown fox jumps over the lazy dog".split()
+    print(w)
+    w.sort(key=len)
+    print(w)
+
+
 
 
 if __name__ == "__main__":
