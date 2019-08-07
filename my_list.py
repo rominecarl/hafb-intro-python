@@ -46,7 +46,7 @@ def main():
 
     # Shallow copies
     # A list of lists
-    a = [[1,2],[3,4]]
+    a = [[1, 2], [3, 4]]
     print(a, type(a))
     print(a[0])
     print("a[0][1]:", a[0][1]) # way to access individual items
@@ -72,11 +72,11 @@ def main():
     c = [21, 37]
     d = c * 4
     print("c",c)
-    print("d",d) # D has 4 elements, all pointing to the same location as c
+    print("d" ,d)   # D has 4 elements, all pointing to the same location as c
     s = [[-1, 1] * 5]
     print(s)
-    # s[1].append(7)  # check this, doesn't seem to be working
-    # print(s)    # check this, doesn't seem to be working
+    s[1].append(7)
+    print(s)
 
     # index()
     w = "the quick brown fox jumped over the lazy dog".split()
@@ -104,7 +104,7 @@ def main():
     w.remove("over")
     print(len(w), w)
 
-    #Rearranging list of elements
+    # Rearranging list of elements
     g = [1, 11, 21, 1211, 112111]
     print("g", g)
     g.reverse()     # Caution: This is permanent
@@ -125,8 +125,6 @@ def main():
     print(w)
     w.sort(key=len)
     print(w)
-
-
 
 
 if __name__ == "__main__":
