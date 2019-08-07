@@ -68,6 +68,22 @@ def main():
     print("a:", a)
     print("b:", b)
 
+    # Repetition
+    c = [21, 37]
+    d = c * 4
+    print("c",c)
+    print("d",d) # D has 4 elements, all pointing to the same location as c
+    s = [[-1, 1] * 5]
+    print(s)    # check this, doesn't seem to be working
+    s[1].append(7)  # check this, doesn't seem to be working
+    print(s)    # check this, doesn't seem to be working
+
+    # index()
+    w = "the quick brown fox jumped over the lazy dog".split()
+    i = w.index('fox')
+    print("The index of 'fox' entry is:", i)
+
+
 if __name__ == "__main__":
     main()
     exit(0)
