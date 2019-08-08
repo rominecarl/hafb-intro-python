@@ -17,12 +17,11 @@ class Flight:
         if not number[2:].isdigit():
             raise ValueError("Invalid route code {}" .format(number))
 
-        self._number = number # implementation details begin with '_'
+        self._number = number   # implementation details begin with '_'
         self._aircraft = aircraft
 
         rows, seats = self._aircraft.seating_plan()
-        self._seating = [None] + \
-                        [{letter:None for letter in seats} for _ in rows]
+        self._seating = [None] + [{letter:None for letter in seats} for _ in rows]
 
     def number(self):
         return self._number[2:]
@@ -38,12 +37,12 @@ class Flight:
         :return:
         """
         rows, seat_letter = self._aircraft.seating_plan()
-        letter = seat[-1] # we only care about the last letter
+        letter = seat[-1]   # we only care about the last letter
         if letter not in seat_letter:
             raise ValueError("Invalid seat leter {}".format(letter))
 
         # Extract row portion
-        row_text = seat[:-1]        #take everything but the last letter
+        row_text = seat[:-1]        # take everything but the last letter
         try:
             row = int(row_text)
         except ValueError:
@@ -59,10 +58,6 @@ class Flight:
         self._seating[row][letter] = passenger
 
 
-
-
-
-
 class Aircraft:
 
     def __init__(self, registration, model,
@@ -71,7 +66,6 @@ class Aircraft:
         self._model = model
         self._num_rows = num_rows
         self._num_seats_per_row = num_seats_per_row
-
 
     def registration(self):
         return self._registration
