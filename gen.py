@@ -46,6 +46,12 @@ def distinct(iterable):
         seen.add(item)
 
 
+def run_pipeline():
+        items = [3, 6, 6, 2, 1, 1]
+        for item in take(3, distinct(items)):
+            print(item)
+
+
 def run_distinct():
     items = [5, 7, 7, 6, 5, 5]
     for item in distinct(items):
@@ -58,7 +64,9 @@ def main():
     :return: 
     """
     # run_take()
-    run_distinct()
+    # run_distinct()
+    run_pipeline()
+
 
 if __name__ == "__main__":
     main()
