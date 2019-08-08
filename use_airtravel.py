@@ -3,7 +3,7 @@ Purpose: Use flight class
 Day 4 - 12:30
 """
 from airtravel import Flight, Aircraft
-
+from pprint import pprint as pp
 def main():
     """
     Test function
@@ -22,8 +22,11 @@ def main():
     # f3 = Flight("AB352")
     # print(f3.number())
 
-    a1 = Aircraft("G-EUP", "Airbus A319", num_rows=22, num_seats_per_row=6,)
+    a1 = Aircraft("G-EUP", "Airbus A319", num_rows=22, num_seats_per_row=6)
     print(a1.registration(), a1.model())
+    print(a1.seating_plan())
+    print(a1.registration(), a1.model())
+    pp(a1._seating)
 
 if __name__ == "__main__":
     main()

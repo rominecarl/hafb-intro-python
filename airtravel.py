@@ -54,7 +54,19 @@ class Aircraft:
         self._model = model
         self._num_rows = num_rows
         self._num_seats_per_row = num_seats_per_row
+
+        rows, seats = self.seating_plan()
+        self._seating = [None] + [{letter:None for letter in seats} for _ in rows] # will hold the seating plan
+        # will use letter as key in dictionary
+        # "{letter:None for letter in seats}" will create a single dictionary
+        # "for _ in rows" creates a dictionary for each row
+        # we have a comprehension that is a list of comprehensions
+        # this is using generators
+
         # these variables persist throughout the life of the object
+
+    def allocate_seat(self, seat_number, passenger_name):
+
 
     def registration(self):
         return self._registration
@@ -62,6 +74,10 @@ class Aircraft:
     def model(self):
         return self._model
 
+    def seating_plan(self):
+        return(range(1, self._num_rows + 1),"ABCDEFGHJK"[:self._num_seats_per_row])
+    # This method is using slicing. Need to investigate more
+    # valid letters are: ABCDEFGHJKLMNPQRSTUVWXYZ <- NO I or O
 
 def main():
     """
