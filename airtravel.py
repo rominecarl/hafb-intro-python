@@ -30,6 +30,38 @@ class Flight:
     def airline(self):
         return self._number[:2]
 
+    def allocate_seat(self, seat, passenger):
+        """
+        Allocate a seat to a passenger
+        :param seat: A seat designator such as '12C', '21F'
+        :param passenger: The passenger name
+        :return:
+        """
+        rows, seat_letter = self._aircraft.seating_plan()
+        letter = seat[-1] # we only care about the last letter
+        if letter not in seat_letter:
+            raise ValueError("Invalid seat leter {}".format(letter))
+
+        # Extract row portion
+        row_text = seat[:-1]        #take everything but the last letter
+        try:
+            row = int(row_text)
+        except ValueError:
+            raise ValueError("Invalid seat row {}".format(row_text))     # raise error with more meaningful message
+
+        if row not in rows:
+            raise ValueError("Invalid row number {}".format(row_text))
+
+        if self._seating[row][letter] is not None:
+            raise ValueError("Seat {} already occupied".format(seat))
+
+        # Assign the seat
+        self._seating[row][letter] = passenger
+
+
+
+
+
 
 class Aircraft:
 
