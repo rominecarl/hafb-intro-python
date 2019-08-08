@@ -17,3 +17,14 @@ Repository for the Weber State University Continuing Education Beginning Python 
     - optional parameters
 - Tuples and unpacking tuples
 - More about strings
+
+## Day 3 Summary
+- Completed discussion on collections
+    - List
+    - Dictionaries
+    - Strings
+    - Tuples
+    - Range
+    - Sets
+- Basics of exception: **try, except, throw**
+- Comprehensions
